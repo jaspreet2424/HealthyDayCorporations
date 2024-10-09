@@ -1,0 +1,56 @@
+@media screen and (max-width : 992px) {
+
+    .upper_navbar{
+        padding: 14px 20px;
+    }
+
+    .close_button_container{
+        width: 100%;
+        display: flex;
+        justify-content: end    ;
+    }
+
+    .hamburger_button{
+        display: block;
+    }
+
+    .nav_close_button{
+        display: block;
+    }
+
+    .hamburger_button.active_bars{
+        position: fixed;
+        top: 2%;
+        right: 2%;
+    }
+
+    .lower_navbar {
+        padding: 15px 25px;
+        position: fixed;
+        top: 0%;
+        right: 0%;
+        height: 100%;
+        width: 50%;
+        background-color: #283618;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: start;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: all ease-in-out 400ms;
+    }
+
+    .lower_navbar.mobile_nav_view{
+        transform: translateX(0%);
+        visibility: visible;
+    }
+
+    .navbar_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

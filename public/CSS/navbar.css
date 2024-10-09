@@ -1,0 +1,75 @@
+.healthyday_header {
+    background-color: #283618;
+}
+
+.upper_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 55px;
+    border-bottom: 1px solid #E4E4DE;
+    color: #C4C5BA;
+}
+
+.lower_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E4E4DE;
+    padding: 20px 50px;
+}
+
+.brand_logo {
+    font-size: 35px;
+}
+
+.navbar_list {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+}
+
+.list_item {
+    font-size: 16px;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #E4E4DE;
+}
+
+.active_nav_link {
+    text-decoration: underline;
+}
+
+.cart_login_buttons_container {
+    display: flex;
+    gap: 25px;
+}
+
+.cart_button,
+.login_button {
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: #E4E4DE;
+    cursor: pointer;
+}
+
+.cart_button:hover,
+.login_button:hover {
+    color: #FFD700;
+}
+
+.close_button_container{
+    display: none;
+}
+
+.hamburger_button , .nav_close_button{
+    background: none;
+    border: none;
+    color: #E4E4DE;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}

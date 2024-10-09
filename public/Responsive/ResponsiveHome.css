@@ -1,0 +1,11 @@
+@media screen and (max-width : 992px) {
+    .products_container {
+        grid-auto-columns: calc((100% / 2));
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .products_container {
+        grid-auto-columns: calc((100% / 1));
+    }
+}

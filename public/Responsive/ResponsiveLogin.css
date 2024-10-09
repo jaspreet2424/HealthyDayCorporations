@@ -1,0 +1,17 @@
+@media screen and (max-width : 992px) {
+    .login_left_page{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 786px) {
+    .login_form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .login_form{
+        width: 90%;
+    }
+}

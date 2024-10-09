@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+1) Ethereal Ivory (off-white) = #E4E4DE
+2) Sophisticated sage (little gray) = #C4C5BA
+3) Timeless Noir (Light Black) = #1B1B1B 
+4) Darker gray-green = #283618;
+5) Light gray-green = #595f39
+6) Golden color = #FFD700
+7) Silver color = $ C0C0C0
+8) Border on white bg = #A9A9A9
+*/
+
+* {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-weight: 300;
+    text-transform: uppercase;
+}

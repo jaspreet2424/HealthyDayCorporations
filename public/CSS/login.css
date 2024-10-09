@@ -1,0 +1,69 @@
+.login_page_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.login_left_page{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #283618;
+}
+
+.brand_logo{
+    font-size: 65px;
+    color: #E4E4DE;
+}
+
+.login_right_page{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.login_heading{
+    font-size: 45px;
+    text-align: center;
+    color: #283618;
+}
+
+.login_input{
+    margin-top: 20px;
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+.login_button{
+    margin-top: 20px;
+    padding: 6px 10px;
+    font-size: 16px;
+    background-color: #283618;
+    border: none;
+    color: #E4E4DE;
+    cursor: pointer;
+}
+
+.login_button:active{
+    background-color: none;
+}
+
+.form_link{
+    margin-top: 15px;
+}
+
+.register_link{
+    color: #283618;
+}
