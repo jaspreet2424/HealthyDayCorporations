@@ -5,7 +5,8 @@ const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 const GMAIL = "js9316713287@gmail.com";
 const GMAIL_PASS = "hfinlclkxcvpcrwp";
-const SECRET_TOKEN = "{[(#@24**$ecretKeyFortoken**24@#)]}";
+const SECRET_TOKEN =
+  process.env.SECRET_KEY || "{[(#@24**$ecretKeyFortoken**24@#)]}";
 
 const Models = {
   userDatabaseModel: userModel,
@@ -243,11 +244,14 @@ class UserServiceClass {
     }
 
     if (isUser.otp !== null) {
-      throw new GraphQLError("Account is not verified, please verify your account first.", {
-        extensions: {
-          code: "BAD_REQUEST",
-        },
-      });
+      throw new GraphQLError(
+        "Account is not verified, please verify your account first.",
+        {
+          extensions: {
+            code: "BAD_REQUEST",
+          },
+        }
+      );
     }
 
     const isCorrectPassword = await UserHelperMethods.decryptPassword(
@@ -272,6 +276,48 @@ class UserServiceClass {
     return userToken;
   }
 
+  static async getUserToken(req, res) {
+    const token = req.headers.authorization;
+    return token.split(" ")[1] || null;
+  }
+
+  static async userAuthentication(token) {
+    let UserToken = "";
+    await jwt.verify(token, SECRET_TOKEN, async (err, decoded) => {
+      if (err) {
+        throw new GraphQLError("Unauthorised Access", {
+          extensions: {
+            code: "UNAUTHORISED",
+          },
+        });
+      } else {
+        const isUser = await Models.userDatabaseModel.findById(decoded.UserId);
+
+        if (!isUser) {
+          throw new GraphQLError("Unauthorised Access. No User Found!", {
+            extensions: {
+              code: "UNAUTHORISED",
+            },
+          });
+        }
+
+        if (isUser.token !== token) {
+          throw new GraphQLError(
+            "Unauthorised Access. Invalid Token Provided!",
+            {
+              extensions: {
+                code: "UNAUTHORISED",
+              },
+            }
+          );
+        }
+
+        UserToken = isUser.token;
+      }
+    });
+
+    return UserToken || null;
+  }
 }
 
 module.exports = {

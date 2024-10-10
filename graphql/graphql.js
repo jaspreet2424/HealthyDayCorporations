@@ -1,6 +1,7 @@
 const { buildSchema, graphql } = require("graphql");
 const { ProductServices } = require("./products/service");
 const { UserServices } = require("./Users/service");
+const { UserServiceClass } = require("./Users/userServiceClasses");
 
 const mySchema = buildSchema(`
   ${ProductServices.ProductSchema}
@@ -23,7 +24,6 @@ const root = {
 
   ...ProductServices.ProductResolvers.mutations,
   ...UserServices.UserResolver.mutations,
-
 };
 
 const handleGraphQLRequest = async (req, res, headers, body) => {
@@ -35,13 +35,25 @@ const handleGraphQLRequest = async (req, res, headers, body) => {
       source: query,
       rootValue: root,
       variableValues: variables,
+      contextValue: {
+        authentication: async() => {
+          const session_token = await UserServiceClass.getUserToken(req , res);
+  
+          if (session_token) {
+            const UserToken = await UserServiceClass.userAuthentication(session_token);
+            return UserToken || null;
+          }
+
+          return null;
+        },
+      },
     });
 
     res.writeHead(200, headers);
     res.end(JSON.stringify(response));
   } catch (error) {
     res.writeHead(500, headers);
-    res.end("Error occured");
+    res.end("Error occured", error.message);
   }
 };
 

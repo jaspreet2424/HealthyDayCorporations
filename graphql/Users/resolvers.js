@@ -1,31 +1,39 @@
+const { GraphQLError } = require("graphql");
 const { UserServiceClass } = require("./userServiceClasses");
 
 const queries = {
-    getAllUsers(){
+    async getAllUsers(parent , context){
+        const UserToken = await context.authentication();
+        if(!UserToken){
+            throw new GraphQLError("Unauthorized Access. Please Login First" , {
+                extensions : {
+                    code : 'UNAUTHORISED'
+                }
+            })
+        }
         return 'All users data fetched successfully';
     }
 }
 
 const mutations = {
     async createNewUser({name , email , password}){
-        const res = UserServiceClass.createUser({name , email , password});
-        return res;
+        const response = UserServiceClass.createUser({name , email , password});
+        return response;
     },
 
     async verifyUser({email , otp}){
-        const res = UserServiceClass.OTPVerification({email , otp});
-        return res;
+        const response = UserServiceClass.OTPVerification({email , otp});
+        return response;
     },
 
     async resendOTP({email}){
-        const res = UserServiceClass.resendOTPMethod({email});
-        return res;
+        const response = UserServiceClass.resendOTPMethod({email});
+        return response;
     },
 
     async loginUser({email , password}){
-        const res = UserServiceClass.loginUser({email , password});
-
-        return res;
+        const response = UserServiceClass.loginUser({email , password});
+        return response;
     }
 }
 
