@@ -48,8 +48,6 @@ const servingResponsiveCSSFiles = (req, res, pathname) => {
 
   fs.readFile(filepath, "utf-8", (err, fileData) => {
     if (err) {
-      console.log(filepath);
-      console.log(err);
       res.writeHead(404, { "Content-Type": "text/plain" });
       res.end("404 Page not found");
     } else {
