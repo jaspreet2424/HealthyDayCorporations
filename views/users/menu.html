@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- this meta tag does not allow third party script tags -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self';"> -->
   <!-- <link rel="stylesheet" href="../../public/CSS/common.css">
   <link rel="stylesheet" href="../../public/CSS/navbar.css">
   <link rel="stylesheet" href="../../public/CSS/menu.css" />
@@ -63,14 +65,14 @@
     <div class="display_menu_products_container">
       <header class="menu_header">
         <div class="menu_search_container">
-          <input type="text" placeholder="Search with HealthyDay...." class="search_input" />
+          <input type="text" placeholder="Search with HealthyDay...." class="search_input" id="search_input" />
           <button class="search_button">Search</button>
         </div>
       </header>
 
       <div class="main_menu_container">
-        <div class="products_container">
-          <div class="each_product_card">
+        <div class="products_container" id="products_display_container">
+          <!-- <div class="each_product_card">
             <div class="inner_card">
               <div class="img_container">
                 <img
@@ -245,12 +247,13 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </section>
 
+  <script type="text/javascript" src="../../public/Scripts/menu.js"></script>
   <script src="https://kit.fontawesome.com/e24141db11.js" crossorigin="anonymous"></script>
 </body>
 

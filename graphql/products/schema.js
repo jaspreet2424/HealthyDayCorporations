@@ -1,11 +1,17 @@
 module.exports.ProductSchema = `
-    scalar Date
+
+    type NutritionValues{
+        protein : String!
+        calories : String!
+        fats : String!
+    }
 
     type Product {
         id : ID!
-        name : String!
-        price : Int!
-        description : String!
-        createdDate : Date!
+        productName : String!
+        productPrice : Int!
+        productDescription : String!
+        productImage : String!
+        nutritionalValues : NutritionValues!
     }
 `

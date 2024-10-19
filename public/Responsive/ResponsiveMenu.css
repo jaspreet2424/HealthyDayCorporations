@@ -53,15 +53,24 @@
 
 @media screen and (max-width : 480px) {
     .each_product_card{
-        height: 250px;
+        height: 300px;
     }
 
     .card_body{
         gap: 4px;
+        padding: 6px 5px;
     }
 
     .add_to_cart_button {
-        display: none;
+        width: 30px;
+        height: 30px;
+    }
+
+    .item_name{
+        font-size: 14px;
+    }
+    .link_body a {
+        font-size: 12px
     }
 
     .item_price{

@@ -1,28 +1,23 @@
-const { thumbnailUpload } = require("./ScalarTypes")
+const { ProductServiceClass } = require("./ProductServiceClasses");
 
 const queries = {
-    message(){
-        return "Hey Message query is successfull"
-    }
-}
+  message() {
+    return "Hey Message query is successfull";
+  },
 
-const mutations = {
-    Date : thumbnailUpload,
+  async getAllProducts() {
+    const response = await ProductServiceClass.fetchAllProductsData();
+    return response;
+  },
 
-    addProduct({name , price , description , createdDate}){
+  async getSingleProduct({id}){
+    const response = await ProductServiceClass.getSingleProductByID(id);
+    return response;
+  }
+};
 
-        const Product = {
-            id : Date.now(),
-            name,
-            price,
-            description,
-            createdDate,
-        }
+const mutations = {};
 
-        return Product;
-    }
-}
+const ProductResolvers = { queries, mutations };
 
-const ProductResolvers = {queries , mutations};
-
-module.exports = {ProductResolvers};
+module.exports = { ProductResolvers };

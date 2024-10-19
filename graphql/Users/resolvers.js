@@ -3,8 +3,8 @@ const { UserServiceClass } = require("./userServiceClasses");
 
 const queries = {
     async getAllUsers(parent , context){
-        const UserToken = await context.authentication();
-        if(!UserToken){
+        const User = await context.authentication();
+        if(!User){
             throw new GraphQLError("Unauthorized Access. Please Login First" , {
                 extensions : {
                     code : 'UNAUTHORISED'

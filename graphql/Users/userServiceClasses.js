@@ -1,5 +1,5 @@
 const { GraphQLError } = require("graphql");
-const { userModel } = require("../../modals/UserModel/User");
+const { userModel } = require("../../modals/User");
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
@@ -282,7 +282,7 @@ class UserServiceClass {
   }
 
   static async userAuthentication(token) {
-    let UserToken = "";
+    let User = null;
     await jwt.verify(token, SECRET_TOKEN, async (err, decoded) => {
       if (err) {
         throw new GraphQLError("Unauthorised Access", {
@@ -312,11 +312,11 @@ class UserServiceClass {
           );
         }
 
-        UserToken = isUser.token;
+        User = isUser;
       }
     });
 
-    return UserToken || null;
+    return User || null;
   }
 }
 

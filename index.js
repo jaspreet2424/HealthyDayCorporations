@@ -11,7 +11,6 @@ const headers = {
   "Access-Control-Allow-Methods": "GET , POST , DELETE , PUT , OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type , Authorization",
   "Access-Control-Max-Age": 2592000, //30 days
-  "Content-Type": "application/json",
 };
 
 databaseConnection();

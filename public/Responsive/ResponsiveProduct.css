@@ -1,0 +1,77 @@
+@media screen and (max-width : 992px) {
+    .product_image_container {
+        width: calc(100% - 30%);
+    }
+
+    .nutritional_details {
+        width: calc(100% - 30%);
+    }
+}
+
+@media screen and (max-width : 786px) {
+    .product_image_container {
+        width: 100%;
+    }
+
+    .nutritional_details {
+        width: 100%;
+    }
+
+    .add_to_cart_button {
+        width: 100%;
+    }
+
+    .recommended_products_container {
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width : 600px){
+    .display_product_details_section {
+        padding: 60px 40px;
+    }
+
+    .recommended_products_section {
+        padding: 60px 40px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+
+    .product_name{
+        font-size: 30px;
+    }
+
+    .price_box {
+        font-size: 18px;
+        height: 60px;
+        width: 60px;
+        top: -5%;
+        right: -3%;
+        transform: rotate(-20deg);
+    }
+
+    .display_product_details_section {
+        padding: 30px 20px;
+    }
+
+    .recommended_products_section {
+        padding: 60px 20px;
+    }
+
+    .each_product {
+        height: 250px;
+    }
+
+    .each_product_image_container{
+        height: 60%;
+    }
+
+    .desc_body{
+        height: 40%;
+        gap: 0px;
+        align-items: start;
+    }
+}

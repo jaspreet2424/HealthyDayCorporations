@@ -1,6 +1,6 @@
 const ProductQueries = `
-    getAllProducts : [Product]
-    message : String!
+    getAllProducts : [Product]!
+    getSingleProduct(id : ID!) : Product!
 `
 
 module.exports = {ProductQueries};
