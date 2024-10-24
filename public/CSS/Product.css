@@ -9,47 +9,67 @@
     text-align: center;
 }
 
-.product_image_container {
-    width: calc(100% - 40%);
-    margin: 40px auto;
-    height: 400px;
+#product_description {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid #283618;
+}
+
+.show_details_container {
+    margin: 50px 0px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    border: 1.5px solid #283618;
+}
+
+.image_container {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .product_image {
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 20%);
+    height: calc(100% - 20%);
 }
 
-.price_box {
+.price_container {
     position: absolute;
-    font-size: 22px;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    background-color: #FFD700;
-    color: #283618;
+    right: 6%;
+    top: 4%;
+    padding: 8px;
+    border: 1.5px solid #283618;
+}
+
+.product_price {
+    background-color: #283618;
+    color: #E4E4DE;
+    font-size: 30px;
+    padding: 4px 15px;
+}
+
+.item_details_container {
+    flex: 1;
+    background-color: #283618;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -8%;
-    right: -5%;
-    transform: rotate(-20deg);
+}
+
+.details_container {
+    width: calc(100% - 20%);
+    height: calc(100% - 20%);
 }
 
 .nutritional_details {
-    width: calc(100% - 50%);
-    margin: 40px auto;
+    width: 100%;
     height: fit-content;
-    padding: 20px 20px;
-    background-color: #283618;
     color: #E4E4DE;
-}
-
-
-.nutritional_details>h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .each_detail {
@@ -57,6 +77,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#rating_star{
+    color: yellow;
+}
+
+.food_category{
+    height: 30px;
+    width: 30px;
+    /* border: 1.5px solid #D21414; */
+    border: 1.5px solid #097E07;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.bg_circle{
+    height: calc(100% - 20%);
+    width: calc(100% - 20%);
+    /* background: #D21414; */
+    background: #097E07;
+    border-radius: 50%;
 }
 
 .button_container {
@@ -97,17 +140,17 @@
     height: 300px;
 }
 
-.each_product_image_container{
+.each_product_image_container {
     width: 100%;
     height: 70%;
 }
 
-.each_product_image{
+.each_product_image {
     width: 100%;
     height: 100%;
 }
 
-.desc_body{
+.desc_body {
     height: 30%;
     display: flex;
     flex-direction: column;

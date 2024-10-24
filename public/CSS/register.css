@@ -43,16 +43,18 @@
 .register_input{
     margin-top: 20px;
     padding: 6px 10px;
-    font-size: 16px;
+    font-size: 18px;
+    text-transform: none;
 }
 
 .register_button{
     padding: 6px 10px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #283618;
     border: none;
     color: #E4E4DE;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .register_button:active{
@@ -65,15 +67,4 @@
 
 .login_link{
     color: #283618;
-}
-
-.password_instructions_container{
-    margin: 20px 0px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: #C4C5BA;
-}
-
-.password_instructions{
-    margin: 0px 30px;
 }

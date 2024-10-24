@@ -35,7 +35,7 @@ const root = {
   ...CartService.CartResolver.mutations,
 };
 
-const handleGraphQLRequest = async (req, res, headers, body) => {
+const handleGraphQLRequest = async (req, res, headers ,body) => {
   try {
     const { query, variables } = JSON.parse(body);
 

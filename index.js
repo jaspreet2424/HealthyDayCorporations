@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
     });
 
     req.on("end", () => {
-      handleGraphQLRequest(req, res, headers, body);
+      handleGraphQLRequest(req, res,headers, body);
     });
   } else {
     servingStaticFiles(req, res);

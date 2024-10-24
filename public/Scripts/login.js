@@ -1,5 +1,4 @@
 // const toggleButton = document.getElementById("toggle_password_button");
-const loginForm = document.getElementById("submission_form");
 
 // toggleButton.addEventListener("click", () => {
 //   const passwordInput = document.getElementById("login_password_input");
@@ -7,6 +6,7 @@ const loginForm = document.getElementById("submission_form");
 // });
 
 const loginFormSubmission = () => {
+  const loginForm = document.getElementById("submission_form");
   loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
 

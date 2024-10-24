@@ -65,46 +65,44 @@
 
     <section class="display_product_details_section">
       <div class="display_product_details_container">
-        <h1 class="product_name">Healthy Paneer Wrap</h1>
-        <hr />
-        <div class="product_image_container">
-          <img
-            src="https://images.unsplash.com/photo-1667451384955-eab03c9d2a37?q=80&w=1922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Failed to load Image"
-            class="product_image"
-          />
-          <div class="price_box">
-            <p class="product_price">369/-</p>
-          </div>
-        </div>
-
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
-          perspiciatis dolorem necessitatibus harum fuga quas ad temporibus sunt
-          voluptates quo?
+        <h1 class="product_name" id="product_name">Healthy Paneer Wrap</h1>
+        <p id="product_description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+          repudiandae reiciendis, suscipit velit dolorum quia cumque voluptatem.
+          Corrupti non ipsum ullam explicabo sed, possimus aperiam.
         </p>
 
-        <div class="nutritional_details">
-          <h2>Nutritional Value Contained in your Meal</h2>
-          <div class="each_detail">
-            <span>Protein Contained</span>
-            <span>8-10g</span>
+        <div class="show_details_container">
+          <div class="image_container">
+            <img
+              src="https://images.unsplash.com/photo-1452251889946-8ff5ea7b27ab?q=80&w=1999&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Failed to load Image"
+              class="product_image"
+              id="product_image"
+            />
+            <div class="price_container">
+              <p class="product_price" id="product_price">360/-</p>
+            </div>
           </div>
-          <div class="each_detail">
-            <span>Protein Contained</span>
-            <span>8-10g</span>
-          </div>
-          <div class="each_detail">
-            <span>Protein Contained</span>
-            <span>8-10g</span>
-          </div>
-          <div class="each_detail">
-            <span>Protein Contained</span>
-            <span>8-10g</span>
-          </div>
-          <div class="each_detail">
-            <span>Protein Contained</span>
-            <span>8-10g</span>
+          <div class="item_details_container">
+            <div class="details_container">
+              <div class="nutritional_details" id="nutritional_details">
+                <p class="each_detail">Total Protein : 8-10 g</p>
+                <p class="each_detail">Total Fats : 4-5 g</p>
+                <p class="each_detail">Total Calories : 250-350 cal</p>
+              </div>
+
+              <div class="reviews_container">
+                <i class="fa-solid fa-star" id="rating_star"></i>
+                <i class="fa-solid fa-star" id="rating_star"></i>
+                <i class="fa-solid fa-star" id="rating_star"></i>
+                <i class="fa-solid fa-star" id="rating_star"></i>
+                <i class="fa-solid fa-star" id="rating_star"></i>
+              </div>
+              <div class="food_category">
+                <div class="bg_circle"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -177,6 +175,17 @@
       </div>
     </section>
 
-    <script src="../../public/Scripts/navbar.js"></script>
+    <script
+      type="text/javascript"
+      src="../../public/Scripts/navbar.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../public/Scripts/product.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e24141db11.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

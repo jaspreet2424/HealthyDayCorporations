@@ -16,19 +16,12 @@
             <p class="brand_logo">HealthyDay</p>
         </div>
         <div class="register_right_page">
-            <form class="register_form">
+            <form class="register_form" id="register_form">
                 <h1 class="register_heading">Register</h1>
 
-                <input type="text" placeholder="full name" class="register_input">
-                <input type="text" placeholder="email address" class="register_input">
-                <input type="password" placeholder="create password" class="register_input">
-                <div class="password_instructions_container">
-                    <ul class="password_instructions">
-                        <li>Password length must be greater than 8</li>
-                        <li>Use special sumbols like - @#$%&*{}()</li>
-                        <li>Use numbers from 0 to 9</li>
-                    </ul>
-                </div>
+                <input type="text" placeholder="full name" class="register_input" id="name">
+                <input type="text" placeholder="email address" class="register_input" id="credentials">
+                <input type="password" placeholder="create password" class="register_input" id="password">
                 <button class="register_button">Register</button>
 
                 <span class="form_link">Already Have an Account <a href="#" class="login_link">login now</a></span>
@@ -37,6 +30,7 @@
     </div>
 
     <script src="https://kit.fontawesome.com/e24141db11.js" crossorigin="anonymous"></script>
+    <script src="../../public/Scripts/register.js"></script>
 
 </body>
 

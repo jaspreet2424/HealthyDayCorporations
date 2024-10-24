@@ -6,12 +6,12 @@ const addtoCart = (item) => {
   console.log(item);
 };
 
-const displayAllProduct = (productsArray) => {
+const displayAllProduct = (prdArray) => {
   const productsDisplayContainer = document.getElementById(
     "products_display_container"
   );
 
-  productsArray.map((item) => {
+  prdArray.map((item) => {
     const eachContainer = document.createElement("div");
 
     eachContainer.classList.add("each_product_card");
@@ -30,7 +30,7 @@ const displayAllProduct = (productsArray) => {
                           <p class="item_price">INR-${item.productPrice}</p>
                         </div>
                         <div class="link_body">
-                          <a href="">Read More</a>
+                          <a href="./product.html?product=${item.id}">Read More</a>
                           <button class="add_to_cart_button" onclick='addtoCart(${JSON.stringify(item)})'>
                             <i class="fa-solid fa-shopping-cart" id="cart_icon"></i>
                           </button>

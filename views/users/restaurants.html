@@ -1,43 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="../../public/CSS/common.css" />
+    <link rel="stylesheet" href="../../public/CSS/navbar.css" />
+    <link rel="stylesheet" href="../../public/CSS/restaurants.css" />
+    <link
+      rel="stylesheet"
+      href="../../public/Responsive/ResponsiveRestaurants.css"
+    />
+  </head>
 
-<body>
-    <header class="healthyday_header">
-        <nav class="upper_navbar">
-            <p>Friday,30/08/2024</p>
-            <div class="cart_login_buttons_container">
-                <button class="cart_button">
-                    CART&lpar;0&rpar; <i class="fa-solid fa-cart-shopping"></i>
-                </button>
-                <button class="login_button">
-                    LOGIN <i class="fa-solid fa-user"></i>
-                </button>
-            </div>
-        </nav>
-        <nav class="lower_navbar">
-            <!-- <h2 class="brand_logo">HEALTHYDAY</h2> -->
-            <h2 class="brand_logo">24*7Food</h2>
+  <body>
+    <!-- <header class="healthyday_header">
+      <nav class="upper_navbar">
+        <p id="nav_date_day">Friday,30/08/2024</p>
+        <div class="cart_login_buttons_container">
+          <button class="cart_button" title="User Cart">
+            CART&lpar;0&rpar; <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+          <button class="login_button" title="Sign in with your account">
+            LOGIN <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="hamburger_button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <nav class="lower_navbar">
+        <div class="close_button_container">
+          <button class="nav_close_button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
 
-            <ul class="navbar_list">
-                <li class="list_item">HOME</li>
-                <li class="list_item">MENU</li>
-                <li class="list_item">RESTAURANTS</li>
-                <li class="list_item">ABOUT</li>
-            </ul>
-        </nav>
-    </header>
+        <p class="brand_logo">HEALTHYDAY</p>
+        
+        <ul class="navbar_list">
+          <li class="list_item">
+            <a href="./home.html" title="Home Page" class="nav_link">Home</a>
+          </li>
+          <li class="list_item">
+            <a href="./menu.html" title="HealthyDay Menu" class="nav_link"
+              >Menu</a
+            >
+          </li>
+          <li class="list_item">
+            <a
+              href="./restaurants.html"
+              title="HealthyDay Restaurants"
+              class="nav_link"
+              >Restaurants</a
+            >
+          </li>
+          <li class="list_item">ABOUT</li>
+        </ul>
+      </nav>
+    </header> -->
 
     <section class="restaurants_introduction_section">
-        <h1>HealthyDay Restaurants</h1>
-        <p>Search Nearby Restaurants</p>
+      <h1>HealthyDay Restaurants</h1>
+      <p>Search Nearby Restaurants</p>
     </section>
-</body>
 
+    <section class="search_filter_section">
+      <div class="search_select_option_container">
+        <select class="select_option_class">
+          <option value="" class="mvoption">Select Country</option>
+        </select>
+        <select class="select_option_class">
+          <option value="" class="mvoption">Select State</option>
+        </select>
+        <select class="select_option_class">
+          <option value="" class="mvoption">Select City</option>
+        </select>
+        <button class="search_button">
+          <span class="sbtext">Search</span>
+          <i class="fa-solid fa-magnifying-glass" id="sbicon"></i>
+        </button>
+      </div>
+
+      <div class="search_input_container">
+        <input
+          type="text"
+          placeholder="Search nearby restaurants"
+          class="search_input"
+        />
+        <button class="search_button">
+          <span class="sbtext">Search</span>
+          <i class="fa-solid fa-magnifying-glass" id="sbicon"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="restaurants_sections">
+      <div class="restaurants_container">
+        <div class="single_restaurant_container">
+          <div class="single_restaurant_body_container">
+            <p class="restaurant_address">
+              <span id="Street_city_name"
+                >Adania Pool, Fatehpura , Vadodara</span
+              >,
+              <span id="state_name">Gujarat</span>
+              <span id="country_name">India</span>
+            </p>
+
+            <table class="timing_table">
+              <tr class="">
+                <td>Openning Time</td>
+                <td>Clossing Time</td>
+              </tr>
+              <tr class="">
+                <td>11:00 AM</td>
+                <td>10:00 PM</td>
+              </tr>
+            </table>
+
+            <table class="timing_table">
+              <tr class="">
+                <td>Current Status</td>
+                <td>Dine-In Status</td>
+              </tr>
+              <tr class="">
+                <td class="danger">Closed</td>
+                <td class="success">Available</td>
+              </tr>
+            </table>
+
+            <button class="vrBtn">View More</button>
+
+          </div>
+          <div class="single_restaurant_image_container">
+            <img
+              src="https://images.unsplash.com/uploads/1412198485051133af17f/5049dacb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Failed to load image"
+              class="single_restaurant_image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/e24141db11.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

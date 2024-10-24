@@ -1,47 +1,30 @@
-/*
-light = #D8D174
-main = #B6C454
-dark = #91972A
-combo = #E6D3A3
-white = #F2F3F4
-success = #097E07
-danger = #D21414
-mediumBlackColor = #7D7C7C
-lightBorder = #7D7C7C
-medium = #424242
-DarkBorder = #7D7C7C
-*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Restaurants Introduction Section styling start*/
 
-*{
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
+.restaurants_introduction_section {
+    margin-top: 50px;
 }
+
+.restaurants_introduction_section>h1 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.restaurants_introduction_section>p {
+    font-size: 25px;
+    text-align: center;
+}
+
+/*Restaurants Introduction Section styling end*/
 
 /*Filter sections styling start*/
 
-.search_filter_section{
+.search_filter_section {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.body_heading_container{
-    width: 100%;
-    margin-top: 120px;
-}
-
-.body_heading{
-    font-size: 40px;
-    color: #91972A;
-    text-align: center;
-}
-
-.search_select_option_container{
+.search_select_option_container {
     width: calc(100% - 10%);
     margin: 0px auto;
     display: grid;
@@ -51,23 +34,22 @@ DarkBorder = #7D7C7C
     gap: 15px;
 }
 
-.select_option_class{
+.select_option_class {
     height: 100%;
     width: 100%;
     padding: 0px 10px;
     font-size: 20px;
 }
 
-.search_button{
+.search_button {
     font-size: 20px;
     border: none;
-    background-color: #91972A;
+    background-color: #283618;
     color: #F2F3F4;
-    font-weight: bold;
     cursor: pointer;
 }
 
-.search_input_container{
+.search_input_container {
     width: calc(100% - 10%);
     margin: 0px auto;
     margin-top: 30px;
@@ -77,35 +59,40 @@ DarkBorder = #7D7C7C
     border: 1.5px solid #7D7C7C;
 }
 
-.search_input_container:hover{
+.search_input_container:hover {
     border: 1.5px solid #424242;
 }
 
-.search_input_container:focus-within{
+.search_input_container:focus-within {
     border: 2px solid #2B2B2B;
 }
 
-.search_input{
+.search_input {
     height: 100%;
     font-size: 20px;
     padding: 0px 15px;
     border: none;
 }
 
-.search_input:focus{
+.search_input:focus {
     outline: none;
 }
+
+#sbicon {
+    display: none;
+}
+
 /*Filter sections styling end*/
 
 /*Restaurants Section styling start*/
 
-.restaurants_sections{
+.restaurants_sections {
     width: 100%;
     margin: 50px 0px;
     padding: 30px 0px;
 }
 
-.restaurants_container{
+.restaurants_container {
     width: calc(100% - 20%);
     margin: 0px auto;
     display: flex;
@@ -113,94 +100,44 @@ DarkBorder = #7D7C7C
     gap: 50px;
 }
 
-.single_restaurant_container{
+.single_restaurant_container {
     height: 350px;
     display: flex;
     background-color: #F2F3F4;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.single_restaurant_image_container{
+.single_restaurant_image_container {
     flex: 1;
     width: 100%;
     height: 100%;
 }
 
-.single_restaurant_image{
+.single_restaurant_image {
     width: 100%;
     height: 100%;
 }
 
-.single_restaurant_body_container{
+.single_restaurant_body_container {
     flex: 1;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.single_restaurant_body_upper_container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.single_restaurant_body_lower_container{
-    display: flex;
-    justify-content: start;
-    border-top: 1.5px solid #7D7C7C;
-    padding-top: 8px;
-}
-
-.card_heading_class{
-    font-size: 35px;
-}
-
-.card_paragraph_class{
-    font-size: 18px;
-    color: #424242;
-}
-
-.is_open_class{
-    font-size: 18px;
-    color: #097E07;
-    font-weight: bold;
-}
-.is_not_open{
-    color:  #D21414;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.is_dine_available_class{
-    font-size: 18px;
-    color: #097E07;
-    font-weight: bold;
-}
-
-.is_dine_not_available{
-    font-size: 18px;
-    color: #D21414;
-    font-weight: bold;
-}
-
-.timings_display_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10px 0px;
-}
-
-.single_restaurant_button{
-    padding: 8px;
+.restaurant_address {
     font-size: 20px;
-    cursor: pointer;
-    color: #2B2B2B;
-    background-color: #E6D3A3;
-    border: none;
-    font-weight: bold;
 }
-.single_restaurant_button:hover{
-    text-decoration: underline;
+
+.vrBtn{
+    padding: 4px 10px;
+    font-size: 15px;
+    background-color: #283618;
+    border: none;
+    cursor: pointer;
+    color: #E4E4DE;
+    margin-top: 15px;
 }
 
 /*Restaurants Section styling end*/

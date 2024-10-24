@@ -20,6 +20,10 @@ const servingHTMLFiles = (req, res, pathname) => {
     case "/sign_up":
       filePath = path.join(__dirname, "../views/users", "register.html");
       break;
+
+    case "/user_cart":
+      filePath = path.join(__dirname, "../views/users", "cart.html");
+      break;
   }
 
   fs.readFile(filePath, "utf-8", (err, fileData) => {

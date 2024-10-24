@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/CSS/VerifyOTP.css" />
+    <link rel="stylesheet" href="../../public/CSS/common.css" />
+  </head>
+  <body>
+    <div class="otp_page_container">
+      <div class="otp_verify_container">
+        <h1 class="otp_heading">Verify Your Email Address</h1>
+        <p id="otp_desc"></p>
+        <form class="otp_form" id="otp_form">
+          <input
+            type="number"
+            placeholder="Enter 6 Digit OTP"
+            min="6"
+            class="otp_input"
+            id="otp"
+          />
+          <button class="otp_button">Verify OTP</button>
+        </form>
+
+        <p class="alert_msg">For Security purposes, please don't share your OTP with anyone</p>
+      </div>
+    </div>
+
+    <script src="../../public/Scripts/VerifyOTP.js"></script>
+  </body>
+</html>

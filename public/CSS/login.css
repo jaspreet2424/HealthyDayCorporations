@@ -43,14 +43,14 @@
 .login_input{
     margin-top: 20px;
     padding: 6px 10px;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: none;
 }
 
 .login_button{
     margin-top: 20px;
     padding: 6px 10px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #283618;
     border: none;
     color: #E4E4DE;

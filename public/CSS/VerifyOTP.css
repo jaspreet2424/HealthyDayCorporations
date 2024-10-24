@@ -1,0 +1,50 @@
+.otp_page_container{
+    width: 100%;
+    height: 100vh;
+    background-color: #E4E4DE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp_heading{
+    text-align: center;
+}
+
+.otp_verify_container{
+    background-color: #FFFFFF;
+    width: 35%;
+    padding: 40px 20px;
+}
+
+.otp_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+    gap: 25px;
+}
+
+.otp_input{
+    padding: 4px 15px;
+    font-size: 18px;
+}
+
+#otp_desc{
+    margin-top :10px;
+    text-align: center;
+}
+
+.alert_msg{
+    color: #D21414;
+    margin-top: 10px;
+}
+
+.otp_button{
+    padding: 8px 10px;
+    font-size: 18px;
+    background-color: #283618;
+    border: none;
+    cursor: pointer;
+    color: #E4E4DE;
+}

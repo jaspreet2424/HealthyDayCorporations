@@ -1,197 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/CSS/cart.css">
-    <link rel="stylesheet" type="text/css" href="../../public/CSS/navbar.css">
-    <link rel="stylesheet" type="text/css" href="../../public/CSS/common.css">
-    <link rel="stylesheet" type="text/css" href="../../public/Responsive/ResponsiveCart.css">
-    <link rel="stylesheet" href="../../public/Responsive/ResponsiveNavbar.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/cart.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/common.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../public/Responsive/ResponsiveCart.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../public/Responsive/ResponsiveNavbar.css"
+    />
     <title>HeadlthyDay - User Cart</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="healthyday_header">
-        <nav class="upper_navbar">
-            <p>Friday,30/08/2024</p>
-            <div class="cart_login_buttons_container">
-                <button class="cart_button" title="User Cart">
-                    CART&lpar;0&rpar; <i class="fa-solid fa-cart-shopping"></i>
-                </button>
-                <button class="login_button" title="Sign in with your account">
-                    LOGIN <i class="fa-solid fa-user"></i>
-                </button>
-                <button class="hamburger_button">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </nav>
-        <nav class="lower_navbar">
+      <nav class="upper_navbar">
+        <p id="nav_date_day"></p>
+        <div class="cart_login_buttons_container">
+          <button class="cart_button" title="User Cart">
+            CART&lpar;0&rpar; <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+          <button class="login_button" title="Sign in with your account">
+            LOGIN <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="hamburger_button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <nav class="lower_navbar">
+        <div class="close_button_container">
+          <button class="nav_close_button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
 
-            <div class="close_button_container">
-                <button class="nav_close_button"><i class="fa-solid fa-xmark"></i></button>
-            </div>
+        <!-- <p class="brand_logo">HEALTHYDAY</p> -->
+        <p class="brand_logo">24*7Food</p>
 
-            <!-- <p class="brand_logo">HEALTHYDAY</p> -->
-            <p class="brand_logo">24*7Food</p>
-
-            <ul class="navbar_list">
-                <li class="list_item">
-                    <a href="./Home.html" title="Home Page" class="nav_link">Home</a>
-                </li>
-                <li class="list_item">
-                    <a href="./Menu.html" title="HealthyDay Menu" class="nav_link">Menu</a>
-                </li>
-                <li class="list_item">RESTAURANTS</li>
-                <li class="list_item">ABOUT</li>
-            </ul>
-        </nav>
+        <ul class="navbar_list">
+          <li class="list_item">
+            <a href="./Home.html" title="Home Page" class="nav_link">Home</a>
+          </li>
+          <li class="list_item">
+            <a href="./Menu.html" title="HealthyDay Menu" class="nav_link"
+              >Menu</a
+            >
+          </li>
+          <li class="list_item">RESTAURANTS</li>
+          <li class="list_item">ABOUT</li>
+        </ul>
+      </nav>
     </header>
 
     <section class="cart_introduction_section">
-        <h1>Shopping Cart</h1>
+      <h1>Shopping Cart</h1>
     </section>
 
     <section class="user_cart_section">
-        <div class="user_shopping_cart_container">
-            <div class="user_shopping_cart_items_container">
-                <h2>Cart Items</h2>
-                <div class="each_cart_item">
-                    <div class="cart_image_container">
-                        <img src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Failed to Load Image" class="cart_item_image">
-                    </div>
-                    <div class="cart_item_description">
-                        <p>Product Name</p>
-                        <p>Product Price INR-456</p>
-                        <div class="quantity_container">
-                            <p>Quantity :</p>
-                            <button class="quantity_buttons">-</button>
-                            <input type="text" min="1" value="1" class="quantity_input">
-                            <button class="quantity_buttons">+</button>
-                        </div>
-                        <div class="remove_button_container">
-                            <button class="remove_item_button" title="Remove Item">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="each_cart_item">
-                    <div class="cart_image_container">
-                        <img src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Failed to Load Image" class="cart_item_image">
-                    </div>
-                    <div class="cart_item_description">
-                        <p>Product Name</p>
-                        <p>Product Price INR-456</p>
-                        <div class="quantity_container">
-                            <p>Quantity :</p>
-                            <button class="quantity_buttons">-</button>
-                            <input type="text" value="1" class="quantity_input">
-                            <button class="quantity_buttons">+</button>
-                        </div>
-                        <div class="remove_button_container">
-                            <button class="remove_item_button" title="Remove Item">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="each_cart_item">
-                    <div class="cart_image_container">
-                        <img src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Failed to Load Image" class="cart_item_image">
-                    </div>
-                    <div class="cart_item_description">
-                        <p>Product Name</p>
-                        <p>Product Price INR-456</p>
-                        <div class="quantity_container">
-                            <p>Quantity :</p>
-                            <button class="quantity_buttons">-</button>
-                            <input type="text" value="1" class="quantity_input">
-                            <button class="quantity_buttons">+</button>
-                        </div>
-                        <div class="remove_button_container">
-                            <button class="remove_item_button" title="Remove Item">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <div class="user_shopping_cart_container">
+        <div class="user_shopping_cart_items_container" id="cart_container">
+          <h2>Cart Items</h2>
+          <!-- <div class="each_cart_item">
+            <div class="cart_image_container">
+              <img
+                src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Failed to Load Image"
+                class="cart_item_image"
+              />
             </div>
-
-            <!-- Mobile View Shopping Cart -->
-
-            <div class="mobile_view_shopping_cart">
-                <div class="mv_each_cart">
-                    <div class="mv_each_cart_container">
-                        <div class="mv_img_container">
-                            <img src="https://images.unsplash.com/photo-1728327510887-273aff2e02cb?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Failed to load Image" class="mv_image">
-                        </div>
-
-                        <div class="mv_cart_body">
-                            <div class="mv_upper_cart_body">
-                                <p class="mv_item_name">Vegetables Salad</p>
-                            </div>
-                            <div class="mv_lower_cart_body">
-                                <p class="mv_item_price">$42</p>
-                                <a class="remove_item">Remove</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mv_quantity_container">
-                        <button class="mv_inc_btn">+</button>
-                        <input type="text" value="1" class="mv_qt_input">
-                        <button class="mv_dec_btn">-</button>
-                    </div>
-                </div>
+            <div class="cart_item_description">
+              <p>Product Name</p>
+              <p>Product Price INR-456</p>
+              <div class="quantity_container">
+                <p>Quantity :</p>
+                <button class="quantity_buttons">-</button>
+                <input type="text" min="1" value="1" class="quantity_input" />
+                <button class="quantity_buttons">+</button>
+              </div>
+              <div class="remove_button_container">
+                <button class="remove_item_button" title="Remove Item">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
             </div>
+          </div>
 
-            <!-- Mobile View Shopping Cart -->
-
-
-            <div class="user_shopping_cart_bill_container">
-                <h2>Total Payment (Items:3)</h2>
-                <div class="bill_card">
-                    <div class="each_item_with_price">
-                        <p>Item-1 Price</p>
-                        <p>INR-789</p>
-                    </div>
-                    <div class="each_item_with_price">
-                        <p>Item-2 Price</p>
-                        <p>INR-199</p>
-                    </div>
-                    <div class="each_item_with_price">
-                        <p>Item-3 Price</p>
-                        <p>INR-189</p>
-                    </div>
-
-                    <div class="discount_container">
-                        <p>Discount Charges</p>
-                        <p>-(INR-60)</p>
-                    </div>
-
-                    <div class="delivery_charges_container">
-                        <p>Delivery Charges</p>
-                        <p>INR-60</p>
-                    </div>
-
-                    <div class="total_amount_container">
-                        <p>Total Amount</p>
-                        <p>INR-1236</p>
-                    </div>
-                </div>
+          <div class="each_cart_item">
+            <div class="cart_image_container">
+              <img
+                src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Failed to Load Image"
+                class="cart_item_image"
+              />
             </div>
+            <div class="cart_item_description">
+              <p>Product Name</p>
+              <p>Product Price INR-456</p>
+              <div class="quantity_container">
+                <p>Quantity :</p>
+                <button class="quantity_buttons">-</button>
+                <input type="text" value="1" class="quantity_input" />
+                <button class="quantity_buttons">+</button>
+              </div>
+              <div class="remove_button_container">
+                <button class="remove_item_button" title="Remove Item">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="each_cart_item">
+            <div class="cart_image_container">
+              <img
+                src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?q=80&w=1906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Failed to Load Image"
+                class="cart_item_image"
+              />
+            </div>
+            <div class="cart_item_description">
+              <p>Product Name</p>
+              <p>Product Price INR-456</p>
+              <div class="quantity_container">
+                <p>Quantity :</p>
+                <button class="quantity_buttons">-</button>
+                <input type="text" value="1" class="quantity_input" />
+                <button class="quantity_buttons">+</button>
+              </div>
+              <div class="remove_button_container">
+                <button class="remove_item_button" title="Remove Item">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div> -->
         </div>
 
-        <!-- <div class="empty_cart_container">
+        <!-- Mobile View Shopping Cart -->
+
+        <div class="mobile_view_shopping_cart">
+          <div class="mv_each_cart">
+            <div class="mv_each_cart_container">
+              <div class="mv_img_container">
+                <img
+                  src="https://images.unsplash.com/photo-1728327510887-273aff2e02cb?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Failed to load Image"
+                  class="mv_image"
+                />
+              </div>
+
+              <div class="mv_cart_body">
+                <div class="mv_upper_cart_body">
+                  <p class="mv_item_name">Vegetables Salad</p>
+                </div>
+                <div class="mv_lower_cart_body">
+                  <p class="mv_item_price">$42</p>
+                  <a class="remove_item">Remove</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="mv_quantity_container">
+              <button class="mv_inc_btn">+</button>
+              <input type="text" value="1" class="mv_qt_input" />
+              <button class="mv_dec_btn">-</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile View Shopping Cart -->
+
+        <div class="user_shopping_cart_bill_container">
+          <h2>Total Payment (Items:3)</h2>
+          <div class="bill_card">
+            <div class="each_item_with_price">
+              <p>Item-1 Price</p>
+              <p>INR-789</p>
+            </div>
+            <div class="each_item_with_price">
+              <p>Item-2 Price</p>
+              <p>INR-199</p>
+            </div>
+            <div class="each_item_with_price">
+              <p>Item-3 Price</p>
+              <p>INR-189</p>
+            </div>
+
+            <div class="discount_container">
+              <p>Discount Charges</p>
+              <p>-(INR-60)</p>
+            </div>
+
+            <div class="delivery_charges_container">
+              <p>Delivery Charges</p>
+              <p>INR-60</p>
+            </div>
+
+            <div class="total_amount_container">
+              <p>Total Amount</p>
+              <p>INR-1236</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="empty_cart_container">
             <img src="../../public/Images/Oops.png" alt="Failed To Load Image" class="empty_cart_image">
             
             <h2 class="empty_cart_message">Nothing in Cart. Start shopping Now.</h2>
@@ -200,7 +220,7 @@
             </a>
         </div> -->
 
-        <!-- <div class="not_login_message_container">
+      <!-- <div class="not_login_message_container">
             <h2 class="not_login_message">You'r not Signed-in. Sign-in to view Items in Cart.</h2>
             <a href="#" class="sign_in_link">
                 Sign-in
@@ -208,8 +228,17 @@
         </div> -->
     </section>
 
-    <script type="application/javascript" src="../../public/Scripts/navbar.js"></script>
-    <script src="https://kit.fontawesome.com/e24141db11.js" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      type="text/javascript"
+      src="../../public/Scripts/cart.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../public/Scripts/navbar.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e24141db11.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

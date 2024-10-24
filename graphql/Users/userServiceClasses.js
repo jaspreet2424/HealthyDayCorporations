@@ -135,7 +135,7 @@ class UserServiceClass {
 
     await UserHelperMethods.mailTransport(mailMessage);
 
-    return "New User Registered successfully";
+    return newUser?.email;
   }
 
   static async OTPVerification({ email, otp }) {
