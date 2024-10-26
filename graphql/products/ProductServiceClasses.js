@@ -33,6 +33,20 @@ class ProductServiceClass {
 
     return product;
   }
+
+  static async filterQueryProducts({ filterquery }) {
+    const products = await modals.healthyDayProductModal.find();
+
+    const filterProducts = products.filter((item) => {
+      const nameFilter = item
+        ? item.productName.toLowerCase().includes(filterquery.toLowerCase())
+        : false;
+
+      return nameFilter;
+    });
+
+    return filterProducts;
+  }
 }
 
 module.exports = {

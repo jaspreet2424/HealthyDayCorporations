@@ -10,10 +10,15 @@ const queries = {
     return response;
   },
 
-  async getSingleProduct({id}){
+  async getSingleProduct({ id }) {
     const response = await ProductServiceClass.getSingleProductByID(id);
     return response;
-  }
+  },
+
+  async getQueryFilterProducts({ filterquery }) {
+    const response = await ProductServiceClass.filterQueryProducts({filterquery});
+    return response;
+  },
 };
 
 const mutations = {};

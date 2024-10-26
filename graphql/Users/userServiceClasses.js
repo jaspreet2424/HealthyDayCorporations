@@ -66,6 +66,7 @@ class UserHelperMethods {
 
 class UserServiceClass {
   static async createUser({ name, email, password }) {
+    
     if (!name || !email || !password) {
       throw new GraphQLError("All Input Fields are required", {
         extensions: {

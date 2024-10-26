@@ -1,0 +1,144 @@
+.user_profile_section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4E4DE;
+}
+
+.user_profile_container {
+    background-color: #FFFFFF;
+    width: calc(100% - 30%);
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.user_information_container {
+    padding: 10px 20px;
+}
+
+/*User Information section Styling start*/
+
+.personal_information_container{
+    width: 100%;
+    background-color: #E4E4DE;
+    padding: 20px 20px;
+}
+
+.infhd{
+    font-weight: bolder;
+}
+
+.details_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.form_inputs{
+    padding: 4px 8px;
+    font-size: 18px;
+    width: 70%;
+}
+
+.form_labels{
+    font-weight: bolder;
+}
+
+.each_form_detail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_btn_cont{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.upd_btn , .save_btn{
+    font-size: 18px;
+    padding: 4px 15px;
+    background-color: #283618;
+    border: none;
+    color: #E4E4DE;
+    cursor: pointer;
+}
+
+/*User Information section Styling end*/
+
+
+/*User Actions Buttons Styling start*/
+
+.user_action_buttons_container {
+    padding: 10px 20px;
+}
+
+.upcont {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #283618;
+}
+
+.uppc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upimg {
+    width: calc(100% - 25%);
+    height: calc(100% - 20%);
+}
+
+.unae {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #E4E4DE;
+}
+
+.act_btn_content {
+    background-color: #283618;
+    margin: 15px 0px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.action_buttons_list {
+    list-style: none;
+}
+
+.btn_list_item {
+    margin: 8px 0px;
+}
+
+.acs_hdng{
+    text-align: center;
+    font-weight: bolder;
+    color: #E4E4DE;
+    margin-bottom: 15px;
+}
+
+.abtn {
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 4px 0px;
+    color: #E4E4DE;
+}
+
+.abtn:hover{
+    background-color: #415629;
+}
+
+/*User Actions Buttons Styling end*/

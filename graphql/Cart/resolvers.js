@@ -1,7 +1,7 @@
 const { CartServiceClass } = require("./CartServicesClasses");
 
 const queries = {
-  async showCartItems(parent ,context) {
+  async showCartItems(parent, context) {
     const User = await context.authentication();
     if (!User) {
       throw new GraphQLError("Unauthorized Access. Please Login First", {
@@ -10,11 +10,13 @@ const queries = {
         },
       });
     }
-    const response = await CartServiceClass.fetchAllCartItems({userId : User._id});
+    const response = await CartServiceClass.fetchAllCartItems({
+      userId: User._id,
+    });
     return response;
   },
 
-  async deleteCartItem({ id }, context) {
+  async deleteCartItem(parent , { id }, context) {
     const User = await context.authentication();
     if (!User) {
       throw new GraphQLError("Unauthorized Access. Please Login First", {
